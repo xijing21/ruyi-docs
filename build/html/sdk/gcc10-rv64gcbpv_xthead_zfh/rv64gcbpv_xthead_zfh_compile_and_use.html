@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支持B,P,V,Xthead,Zfh扩展的构建和使用 &mdash; RuyiSDK 在线文档 1.0.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=2d33a3a8"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/tabs.js?v=3030b3cb"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RuyiSDK 在线文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">RuyiSDK Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">RuyiSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../plan/index.html">版本规划路线图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmark/index.html">运行Benchmarks</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RuyiSDK 在线文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">支持B,P,V,Xthead,Zfh扩展的构建和使用</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="b-p-v-xthead-zfh">
+<span id="rv64gcbpv-xthead-zfh-compile-and-use"></span><h1>支持B,P,V,Xthead,Zfh扩展的构建和使用<a class="headerlink" href="#b-p-v-xthead-zfh" title="此标题的永久链接">¶</a></h1>
+<p>安装构建依赖(如有后续构建提示缺失，可根据错误信息全依赖)</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-VWJ1bnR1546v5aKD" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-VWJ1bnR1546v5aKD" name="VWJ1bnR1546v5aKD" role="tab" tabindex="0">Ubuntu环境</button><button aria-controls="panel-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" name="T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" role="tab" tabindex="-1">OpenEuler/RevyOS环境</button><button aria-controls="panel-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" name="RmVkb3JhL0NlbnRPU+eOr+Wigw==" role="tab" tabindex="-1">Fedora/CentOS环境</button></div><div aria-labelledby="tab-0-VWJ1bnR1546v5aKD" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-VWJ1bnR1546v5aKD" name="VWJ1bnR1546v5aKD" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get install -y make diffutils autoconf automake autotools-dev curl python3 python3-pip libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" name="T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf install -y make diffutils autoconf automake python3 libmpc-devel mpfr-devel gmp-devel gawk  bison flex texinfo patchutils gcc gcc-c++ zlib-devel expat-devel
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" name="RmVkb3JhL0NlbnRPU+eOr+Wigw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo yum install -y make diffutils autoconf automake python3 libmpc-devel mpfr-devel gmp-devel gawk  bison flex texinfo patchutils gcc gcc-c++ zlib-devel expat-devel
+</pre></div>
+</div>
+</div></div>
+<p>下载riscv-gnu-toolchain,切换至gcc-10分支:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ruyisdk/riscv-gnu-toolchain
+git checkout origin gcc-10
+</pre></div>
+</div>
+<p>构建准备——进入riscv-gnu-toolchain目录，建立build文件夹，用于存放构建生成的工具链：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> riscv-gnu-toolchain <span class="o">&amp;&amp;</span> mkdir build
+</pre></div>
+</div>
+<p>配置构建参数，以启用不同扩展</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#支持xthead扩展的构建（rv64gcbpv_xthead_zfh）</span>
+./configure --prefix<span class="o">=</span><span class="nv">$PWD</span>/build --with-arch<span class="o">=</span>rv64gcbpv0p7_xthead_zfh
+</pre></div>
+</div>
+<p>配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make linux -j <span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+<p>构建完成后，检查是否构建成功(这里以标准64位工具链为例，32位工具链注意替换工具链名称)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>build/bin/riscv64-unknown-linux-gnu-gcc -v
+</pre></div>
+</div>
+<p>RuyiSDK 是</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, RuyiSDK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
