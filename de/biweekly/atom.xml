@@ -74,7 +74,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 <li>修复了构建错误和段错误 bug。</li>
 <li>优化 RiscvCmpDouble 和 RiscvCmpSingle 的 codegen。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="操作系统支持矩阵">操作系统支持矩阵<a class="hash-link" aria-label="Direkter Link zur 操作��系统支持矩阵" title="Direkter Link zur 操作系统支持矩阵" href="https://ruyisdk.org/docs/de/biweekly/2025/04/22/ruyisdk-biweekly-43#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9F%A9%E9%98%B5">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="操作系统支持矩阵">操作系统支持矩阵<a class="hash-link" aria-label="Direkter Link zur 操作系��统支持矩阵" title="Direkter Link zur 操作系统支持矩阵" href="https://ruyisdk.org/docs/de/biweekly/2025/04/22/ruyisdk-biweekly-43#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9F%A9%E9%98%B5">​</a></h2>
 <ul>
 <li>ruyisdk/support-matrix<!-- -->
 <ul>
