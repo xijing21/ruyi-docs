@@ -1,0 +1,8 @@
+{
+  "label": "RuyiSDK VSCode 插件",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "官方 VS Code 扩展，把 Ruyi 包管理器的能力以可视化方式嵌入 IDE，用于安装/更新工具链、创建虚拟环境、查看新闻、提取源码包等。"
+  }
+}

@@ -1,0 +1,24 @@
+---
+sidebar_position: 4
+---
+
+# 虚拟环境（Virtual Environments）
+
+通过 VS Code 插件以向导方式创建和管理 Ruyi 虚拟环境，并与终端/构建工具联动。
+
+![alt text](./image/image-6.png)
+
+## 创建与激活
+
+- 点击侧边栏 **Ruyi** > **Virtual Environments** 视图中的 `+`。
+- 选择 Profile（如 `generic`、`sipeed-lpi4a`、`milkv-duo` 等）。
+- 勾选工具链（可多选），可选配置模拟器。
+- 指定名称和路径，完成创建。
+- 在列表点击环境名称即可激活/停用；状态栏同步显示当前激活环境。
+
+> 激活后，VS Code 终端会继承虚拟环境的 PATH 与交叉编译配置。虚拟环境目录包含 `toolchain.cmake`、`meson-cross.ini` 等文件，可直接供 CMake/Meson 使用。
+
+## 提示
+
+- 创建前请先在 **Packages** 视图安装所需工具链/模拟器。
+- 虚拟环境概念与 CLI 行为一致，更多细节参考包管理器文档的 [使用集成功能](../Package-Manager/intergration)。
