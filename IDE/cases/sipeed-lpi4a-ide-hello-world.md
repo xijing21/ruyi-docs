@@ -1,8 +1,8 @@
-# Sipeed Lichee Pi 4A: 使用 riscv64-plctxthead-linux-gnu 工具链构建 C++ 项目 Hello World 
+# Sipeed Lichee Pi 4A: 使用 riscv64-plctxthead-linux-gnu 工具链构建 C++ 项目 Hello World
 
 ## 准备开发环境
 
-1. 下载最新的 Eclipse IDE for Embedded C/C++ Developers: https://www.eclipse.org/downloads/packages/
+1. 下载 2024-12 (4.34) 及更新版本的 Eclipse IDE for Embedded C/C++ Developers: https://www.eclipse.org/downloads/packages/
 1. 按照下载页面的说明，下载和安装最新的 RuyiSDK IDE 插件: https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/continuous
 
 ![eclipse-ide-plugin-installation](image/sipeed-lpi4a-ide-hello-world/eclipse-ide-plugin-installation.jpg)
