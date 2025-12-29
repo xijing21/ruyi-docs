@@ -39,13 +39,13 @@ int main() {
 
 4. 打开 VS Code 终端（已激活 venv），执行编译与运行：
 
-```bash input="2,4,5"
-# （可选）设置 PYTHONPATH，指向 pipx 安装的 ruyi 包路径
-export PYTHONPATH=/path/to/pipx/venvs/ruyi/lib/python3.x/site-packages:$PYTHONPATH
-
+```bash input="1,2"
 riscv64-unknown-linux-gnu-gcc hello.c -o hello
 ruyi-qemu ./hello
 ```
+
+> 目前pipx方式安装ruyi存在已知问题（详见 https://github.com/ruyisdk/ruyisdk/issues/414）。
+若使用pipx安装的插件，需先运行 `pipx ensurepath` 并重启终端以确保 `ruyi-qemu` 可用，并设置环境变量 `PYTHONPATH` 指向 pipx 的ruyi安装路径，例如：`export PYTHONPATH="$HOME/.local/pipx/venvs/ruyi/lib/python3.x/site-packages:$PYTHONPATH"`
 
 输出 `Hello, RuyiSDK!` 表示构建与运行成功。
 
