@@ -42,27 +42,27 @@
 
 1. File > New > Project
 
-   ![1735624096763](image//1735624096763.png)
+   ![1735624096763](image/milkv-duo-ide/1735624096763.png)
 2. 选择 C/C++ > Makefile Project with Existing Code > Next
 
-   ![1735623999135](image//1735623999135.png)
+   ![1735623999135](image/milkv-duo-ide/1735623999135.png)
 3. 导入准备好的源码：
 
    - 点击 Browse >  目标源码路径
    - Toolchain for Indexer Settings ：选择 RISC-V Cross GCC
    - Finish
 
-     ![1735624436834](image//1735624436834.png)
+     ![1735624436834](image/milkv-duo-ide/1735624436834.png)
 4. 工程 hello-world > 右键 > Properties  配置相关属性
 
    1. 为工程配置工具链路径
 
-      ![1735624925007](image//1735624925007.png)
+      ![1735624925007](image/milkv-duo-ide/1735624925007.png)
 
       选择之前ruyi install 安装编译器的路径（默认在~/.local/share/ruyi/binaries/x86_64/ 路径下），或者创建的虚拟环境下的bin目录；
    2. 设置编译属性
 
-      ![1735625245878](image//1735625245878.png)
+      ![1735625245878](image/milkv-duo-ide/1735625245878.png)
 5. 编辑 Makefile
 
    - 项目自带的 Makefile 的正确运行依赖于 envsetup.sh 脚本对环境变量的预先设置。之前在[厂商文档操作实践](https://github.com/milkv-duo/duo-examples/blob/main/README-zh.md)中，我们了解到预先设置了编译器前缀、编译选项、链接参数等信息，为了方便，将这些信息写到 Makefile 中指定。注意 TOOLCHAIN_PREFIX 路径需要按需修改。
@@ -110,16 +110,16 @@
    - Window > Show View > Terminal
    - Terminal: Open a new Terminal View/Open a Terminal > SSH Terminal > 对照下图输入Host、User、Password（milkvduo的root密码是：milkv）
 
-     ![1735626678903](image/1735626678903.png)
+     ![1735626678903](image/milkv-duo-ide/1735626678903.png)
 
-     ![1735626740680](image/1735626740680.png)
+     ![1735626740680](image/milkv-duo-ide/1735626740680.png)
 
-     ![1735626766840](image/1735626766840.png)
+     ![1735626766840](image/milkv-duo-ide/1735626766840.png)
 
-     ![1735626979037](image/1735626979037.png)
+     ![1735626979037](image/milkv-duo-ide/1735626979037.png)
    - 使用 Makefile 中的 `scp` 命令前，需要在目标主机上提前创建好对应的目录结构，这样文件能够正确被传输到目标目录。构建完成后，目录下将会出现目标程序。
 
-     ![1736776549440](image/1736776549440.png)
+     ![1736776549440](image/milkv-duo-ide/1736776549440.png)
 
 ### 执行构建
 
@@ -127,10 +127,10 @@
 
 1. Console 窗口无错误
 
-   ![1736776684233](image/1736776684233.png)
+   ![1736776684233](image/milkv-duo-ide/1736776684233.png)
 2. SSH Terminal窗口已经能够看到成功传输的helloworld目标程序
 
-   ![1736776707622](image/1736776707622.png)
+   ![1736776707622](image/milkv-duo-ide/1736776707622.png)
 
 ### 将目标程序传输到目标设备
 
@@ -145,7 +145,7 @@
 
 可以在 SSH Terminal 窗口中查看 helloworld 目标程序，并运行：
 
-   ![1736777304796](image/1736777304796.png)
+   ![1736777304796](image/milkv-duo-ide/1736777304796.png)
 
 #### C/C++ Remote Application
 
@@ -159,14 +159,14 @@
 - Remote Absolute File Path for C/C++ Application : 输入在RISC-V设备上目标程序的绝对地址（本例中需要与Makefile upload的scp命令中的路径一致）
 - Skip download to target path：当前版本这里建议勾选，并搭配在Makefile中定义upload目标来实现目标程序从主机传输到目标开发板上。这是因为不勾选的情况下，需要IDE安装RSE（Remote System Explorer）插件，并且要求目标设备系统支持 sftp-server。目前 milkvduo 上不支持 sftp-server，所以暂时不支持该功能。
 
-  ![1736321809187](image/1736321809187.png)
+  ![1736321809187](image/milkv-duo-ide/1736321809187.png)
 
-  ![1736320799175](image/1736320799175.png)
+  ![1736320799175](image/milkv-duo-ide/1736320799175.png)
 
 运行效果展示：
 
-- ![勾选Skip download to target path远程运行成功效果](image/run1.gif)
-- ![不勾选Skip download to target path运行报错效果](image/run1.gif)
+- ![勾选Skip download to target path远程运行成功效果](image/milkv-duo-ide/run1.gif)
+- ![不勾选Skip download to target path运行报错效果](image/milkv-duo-ide/run1.gif)
 
   > milkv duo img 目前不支持sftp：https://github.com/milkv-duo/duo-buildroot-sdk/issues/167  当milvduo镜像支持 sftp-server 后该问题能够解决。
   >
@@ -295,9 +295,9 @@ GDBServer + GDB命令远程调试的步骤如下：
 
    ```
 
-   ![1736326691511](image/1736326691511.png)
+   ![1736326691511](image/milkv-duo-ide/1736326691511.png)
 
-   ![Local Terminal + SSH Terminal | GDBSerer+GDB 调试展示](image/gdb-terminal-1.gif)
+   ![Local Terminal + SSH Terminal | GDBSerer+GDB 调试展示](image/milkv-duo-ide/gdb-terminal-1.gif)
 
 #### C/C++ Remote Application
 
@@ -311,26 +311,26 @@ GDBServer + GDB命令远程调试的步骤如下：
 - Debugger > Main > GDB Debugger : 指定GDB的路径。本例中使用的是 `~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-gdb`
 - Debugger > GDB > GDBserver setting: 指定GDBServer 及通信端口
 
-  ![1736320771077](image/1736320771077.png)
+  ![1736320771077](image/milkv-duo-ide/1736320771077.png)
 
-  ![1736320799175](image/1736320799175.png)
+  ![1736320799175](image/milkv-duo-ide/1736320799175.png)
 
-  ![1736320837701](image/1736320837701.png)
+  ![1736320837701](image/milkv-duo-ide/1736320837701.png)
 
-  ![1736324370390](image/1736324370390.png)
+  ![1736324370390](image/milkv-duo-ide/1736324370390.png)
 
   跟运行一样，由于目前 milkv duo 不支持 sftp-server，因此目标程序的远端传输功能不可用，执行会报如下的错误。
 
-  ![1736320589408](image/1736320589408.png)
+  ![1736320589408](image/milkv-duo-ide/1736320589408.png)
 
   勾选 Skip download to target path 跳过下载目标程序，就能绕过这个问题。配合Makefile中的upload定义，在构建阶段就完成目标程序从主机传输到目标设备中。
 
-  ![1736321809187](image/1736321809187.png)
+  ![1736321809187](image/milkv-duo-ide/1736321809187.png)
 
 运行效果展示：
 
-- ![不勾选Skip download to target path远程运行报错效果](image/gdb-withdownload.gif)
-- ![勾选Skip download to target path运行成功效果](image/gdb-withoutdownload.gif)
+- ![不勾选Skip download to target path远程运行报错效果](image/milkv-duo-ide/gdb-withdownload.gif)
+- ![勾选Skip download to target path运行成功效果](image/milkv-duo-ide/gdb-withoutdownload.gif)
 
 ## 补充说明
 
