@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-
 # Hello Ruyi
 
 欢迎来到 [RuyiSDK](https://github.com/ruyisdk) 相关介绍内容，以下是本文相关内容：
@@ -12,9 +11,10 @@ sidebar_position: 1
 > 4. 我可以在什么设备上运行 -> 支持的设备
 > 5. RuyiSDK 的原理是什么 -> RuyiSDK-架构示意图
 > 6. 我该从何开始 -> 让我们开始吧！
+
 ## 介绍
 
-RuyiSDK 是一个由 [PLCT Lab](https://plctlab.org/) 所启动的开源项目，该项目旨在为 RISC-V 开发者提供一个便捷、完善的开发环境。其提供了相关最新的硬件信息、软件支持，例如在支持的设备中有提供相关支持硬件情况；软件层面提供了镜像（如 [RevyOS](https://github.com/ruyisdk/revyos)）、工具链、包管理器等。
+RuyiSDK 是一个由中国科学院软件研究所（ISCAS）主导的开源项目，该项目旨在为 RISC-V 开发者提供一个便捷、完善的开发环境。其提供了相关最新的硬件信息、软件支持，例如在支持的设备中有提供相关支持硬件情况；软件层面提供了镜像（如 [RevyOS](https://github.com/ruyisdk/revyos)）、工具链、包管理器等。
 
 其最终目标是希望为 RISC-V 开发者提供一个完善、便捷的开发环境，使得 RISC-V 成为主流架构，以及建设并运营一个完善的社区以便开发者交流。最终希望 RuyiSDK 可以走向国际化，为全球的 RISC-V 开发者提供开发的便捷。
 
@@ -29,6 +29,7 @@ RISC-V 是第五代精简指令集，由加州伯克利分校所发起的一个�
 ![RuyiSDK](./RuyiSDK.png)
 
 RuyiSDK 分为以下三个部分：
+
 ### [Ruyi 包管理器](/docs/category/ruyi-包管理器)
 
 该包管理器是一个在线的软件源，在该包管理器中，我们提供了如下内容：
@@ -53,19 +54,19 @@ RuyiSDK 分为以下三个部分：
 
 在我们的社区当中，提供了大量的相关技术文章、代码、教程视频，以及我们会举办一定的线下活动获得来自用户的反馈，在线上也会有相应的论坛提供给开发者进行技术交流。
 
-----
+---
 
 RuyiSDK 对 RISC-V 设备的集成和支持主要包括以下几个方面：
 
-1.  RISC-V 开发板镜像相关信息以及下载、安装教程，便于开发者获取相关镜像（换而言之提供一个镜像站），其中涵盖多种操作系统（如基于 Debian 的 RevyOS、openEuler RISC-V 等）提供给开发者使用。
-2.  提供 RISC-V 开发板对应的演示程序、开发资料和相关工具（含适用的编译工具链、模拟器等）的信息维护和下载，方便 RISC-V 开发者快速上手。
-3.  在集成开发环境中增加 RISC-V 设备专有向导页面、实现开发环境和运行环境的文件传输、支持在 RISC-V 设备上调试应用程序等。
+1. RISC-V 开发板镜像相关信息以及下载、安装教程，便于开发者获取相关镜像（换而言之提供一个镜像站），其中涵盖多种操作系统（如基于 Debian 的 RevyOS、openEuler RISC-V 等）提供给开发者使用。
+2. 提供 RISC-V 开发板对应的演示程序、开发资料和相关工具（含适用的编译工具链、模拟器等）的信息维护和下载，方便 RISC-V 开发者快速上手。
+3. 在集成开发环境中增加 RISC-V 设备专有向导页面、实现开发环境和运行环境的文件传输、支持在 RISC-V 设备上调试应用程序等。
 
 ## 支持的设备
 
 目前 RuyiSDK [支持的设备](https://github.com/ruyisdk/support-matrix)如下：
 
-| 型号                            |                      |                          |                     |
+| 型号                          |                      |                          |                     |
 | ----------------------------- | -------------------- | ------------------------ | ------------------- |
 | 100ASK-V853-PRO               | AllWinner V853       | BananaPi BPI-F3          | BeagleV-Ahead       |
 | BeagleV-Fire                  | CanMV K230(D)        | Canaan K510-CRB-V1.2 KIT | CH32V103-EVT        |
@@ -80,7 +81,6 @@ RuyiSDK 对 RISC-V 设备的集成和支持主要包括以下几个方面：
 | Sipeed M0P Dock               | Sipeed M0s Dock      | Sipeed M1s Dock          | Star64              |
 | Tang Mega 138K                | TinyVision           | VisionFive               | VisionFive 2        |
 | YuzukiHD-Lizard               |                      |                          |                     |
-
 
 > 文档可能更新不及时，查看最新支持的设备请通过指令 `ruyi device provision` 查询。
 
