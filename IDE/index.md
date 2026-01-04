@@ -6,41 +6,42 @@ sidebar_position: 1
 
 ## 简介
 
-RuyiSDK IDE 是一款基于开源软件 Eclipse 开发的、图形化的、主要面向 RISC-V 开发者的集成开发环境。该工具在继承 Eclipse 对嵌入式开发支持的基础上，计划逐步集成多款主流RISC-V开发板的 SDK，使得 RISC-V 开发更加便捷。
+RuyiSDK IDE 是一款基于开源软件 Eclipse Embedded CDT 开发的一款图形化的、主要面向 RISC-V 开发者的集成开发环境。该工具继承了 Eclipse 对嵌入式开发的良好支持，计划逐步集成多款主流 RISC-V 开发板的 SDK，建成有 RuyiSDK 特色的 RISC-V 开发环境，造福软件开发者。
 
-## 安装和启动
+## 下载
 
-### 下载 IDE
+RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (请勿去掉末尾的斜杠)
 
-RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide/
+本 IDE 支持 x86_64、aarch64、riscv64 三种架构，请按照您当前的开发环境选择；IDE 中已包含 JRE，您无需额外配置 Java 环境。
 
-> 注意：请保留地址末尾的 `/`，否则可能打不开目录页面。
+## 启动
 
-从上述下载地址下载最新版本的 IDE ，注意需要选择匹配架构的安装包，如果您想在 x86_64 环境下开发，需下载最新版本的 `linux.gtk.x86_64.tar.gz` 包；如果您想在 ARM 设备上开发，则需要下载 `linux.gtk.aarch64.tar.gz` 包；如果您希望在 RISC-V 设备上运行，则下载 `linux.gtk.riscv64.tar.gz` 包。
+1. 将 tar.gz 包解压缩，在释放出的 ruyisdk 文件夹中双击 `ruyisdk` 以启动 IDE。
 
-除了 IDE 本身，您还需要下载 RuyiSDK IDE 插件。目前插件整合到 RuyiSDK IDE 的工程工作还在完善，当前需要手动将插件拷贝到 RuyiSDK IDE dropins 目录使用，未来我们会完善相关工程，提供更加便捷的安装和使用方式。当前您可以参考下方的使用说明来安装和使用。
+![ruyisdk-ide-startup-0-download-logo](image/ruyisdk-ide-startup-0-download-logo.jpg)
 
-插件使用说明：
+2. 选择一个文件夹作为 IDE 的工作空间 (Workspace)。如果是首次使用，您可以选择一个新文件夹；如果您要继续之前的开发，请填入已存在的工作空间的路径。
 
-- 从 [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/latest) 下载最新插件包
-- 将 `org.ruyisdk.ide_\*.zip` 解包到 RuyiSDK IDE 安装目录下的 `dropins` 目录中
+![ruyisdk-ide-startup-1-workspace-configuration](image/ruyisdk-ide-startup-1-workspace-configuration.jpg)
 
-### 启动 IDE
+3. 完成工作空间的选择后，单击 `Launch` 按钮就可以进入 IDE 了。
 
-解压缩后在命令行中执行 `./ruyisdk` 即可启动运行 RuyiSDK IDE。
+![ruyisdk-ide-startup-2-main-ui](image/ruyisdk-ide-startup-2-main-ui.jpg)
 
-1. 解压您下载的 IDE 软件包到任意路径，进入到 ruyisdk 目录下，在命令行中执行 `./ruyisdk` 即可启动 IDE。
-2. 接下来 IDE 会提示选择工作空间 WorkSpace，您可以创建一个新的目录作为工作空间，或者指定已有的工作空间。
-3. 接着点击 `Launch` 按钮就可以运行 IDE 了。
-4. 启动成功后，将进入 IDE ，这样就可以开始使用了。
+## 安装插件
 
-> 说明：RuyiSDK IDE 已经集成了openJDK（openJDK 21）供程序自身的运行，可以不用额外安装JDK。这个openJDK 21主要供 RuyiSDK IDE自身运行使用，您创建的Java 相关工程，可以设定所需的 Java 环境。
+为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。请按照插件仓库中的说明进行配置: https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/continuous
+
+![eclipse-ide-plugin-installation](image/eclipse-ide-plugin-installation.jpg)
+
+目前我们正在完善整合了插件的 RuyiSDK IDE 工程，将很快提供更加便捷的安装和使用方式。
+
+## 案例
+
+- [Sipeed Lichee Pi 4A: 在 RuyiSDK IDE 中构建 Hello World 项目](./cases/sipeed-lpi4a-ide-hello-world.md)
+
+RuyiSDK IDE 的文档均以 Ubuntu 22.04 LTS x86_64 为例展开说明，如果您在使用其他版本 Ubuntu 或使用其他发行版时遇到问题，欢迎您到 [RISC-V 开发者社区](https://ruyisdk.cn/)或我们的[代码仓库](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues)提交截图和报错信息。感谢您为 RISC-V 生态添砖加瓦！
 
 ## 更新
 
-RuyiSDK IDE 您需要下载最新版本来替代旧的版本。IDE 新版本启动时，您可以选择之前创建的工作空间，这样可以导入之前的工作成果，继续开发。
-
-## 文档说明
-
-1. RuyiSDK IDE 的文档和文档中的截图均以 Ubuntu 22.04 LTS x86_64 为例展开说明，如果您是其它环境，可能存在不一致的情况，需要您自行调整。
-2. RuyiSDK IDE 当前维护的是开发分支，保持滚动更新，文档随最新版本更新。建议您始终下载最新版本。
+RuyiSDK IDE 在不断迭代。启动新版本 IDE 时，您可以放心选择已有的工作空间 (Workspace) 以继续开发。我们的文档将跟随 IDE 更新而更新，建议您保持使用最新版本以获得新功能和问题修复。
