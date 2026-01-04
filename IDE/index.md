@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## 简介
 
-RuyiSDK IDE 是一款基于开源软件 Eclipse Embedded CDT 开发的一款图形化的、主要面向 RISC-V 开发者的集成开发环境。该工具继承了 Eclipse 对嵌入式开发的良好支持，计划逐步集成多款主流 RISC-V 开发板的 SDK，建成有 RuyiSDK 特色的 RISC-V 开发环境，造福软件开发者。
+RuyiSDK IDE 是一款基于开源软件 Eclipse Embedded CDT 开发的图形化、主要面向 RISC-V 开发者的集成开发环境。该工具继承了 Eclipse 对嵌入式开发的良好支持，计划逐步集成多款主流 RISC-V 开发板的 SDK，建成有 RuyiSDK 特色的 RISC-V 开发环境，造福软件开发者。
 
 ## 下载
 
