@@ -32,4 +32,4 @@ target remote <device-ip>:2345
 
 ## 备注
 
-- 若需更完整的 IDE 配置与演示，请直接参考 [Milkv Duo IDE 开发流程](../../IDE/cases/milkv-duo-ide.md)。
+- 若需更完整的 IDE 配置与演示，请直接参考 [Milkv Duo IDE 开发流程](/docs/IDE/cases/milkv-duo-ide)。

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # CoreMark：使用插件完成构建（以 LicheePi 4A 为例）
 
-本示例以 CoreMark 为例，演示在插件中完成工具链安装、虚拟环境创建、源码解包、构建与运行的基本流程。详细说明参见 [使用 Ruyi 编译环境构建](../../Package-Manager/cases/case1.md)。
+本示例以 CoreMark 为例，演示在插件中完成工具链安装、虚拟环境创建、源码解包、构建与运行的基本流程。详细说明参见 [使用 Ruyi 编译环境构建](/docs/Package-Manager/cases/case1)。
 
 ## 步骤
 
